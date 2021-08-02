@@ -1,0 +1,23 @@
+.projects-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.projects-section {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.project-img {
+  margin: 20px;
+  width: 400px;
+  height: 250px;
+}
