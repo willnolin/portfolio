@@ -1,7 +1,10 @@
-
+.App {
+  background-color: rgb(90, 79, 79);
+}
 .layout-children {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   min-height: calc(100vh - 223px)
 }

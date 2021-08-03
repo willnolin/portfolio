@@ -39,7 +39,7 @@ export default function Nav() {
       <div id="navbarBasicExample" className={`navbar-menu`}>
 
         <div className="navbar-end">
-          <Link to="/about"><button className="button is-primary is-outlined">About</button></Link>
+          <Link to="/about"><button className="button is-black is-outlined">About</button></Link>
           <Link to="/projects"><button className="button is-link is-outlined">Projects</button></Link>
           <Link to="/contact"><button className="button is-info is-outlined">Contact</button></Link>
 
