@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Home from './screens/Home';
 import Projects from './screens/Projects';
 import { Switch, Route } from 'react-router-dom'
@@ -9,18 +9,10 @@ import Layout from './components/Layout';
 
 
 function App() {
-  const [volume, setVolume] = useState(0.5)
-  // const [lastVolume, setLastVolume] = useState(null)
-  // const [isMuted, setIsMuted] = useState(false)
+  const [volume, setVolume] = useState(0.3)
 
-  // const handleMute = () => {
-  //   if (isMuted) {
-  //     setVolume(lastVolume)
-  //   } else {
-  //     setVolume(0)
-  //   }
 
-  // }
+
   return (
     <div className="App">
       <Layout volume={volume} setVolume={setVolume}>

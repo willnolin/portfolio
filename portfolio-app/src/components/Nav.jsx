@@ -33,23 +33,7 @@ export default function Nav(props) {
           {/* <h1 className="title is-2">Will Metivier</h1> */}
         </Link>
 
-        <Volume volume={volume} setVolume={setVolume} />
-
-        {/* <div className="volume-container">
-          <img src={volumeIcon} alt="volume" className="volume" style={{ display: showVolume }} onClick={() => {
-            setShowVolume('none');
-            setShowMute('block');
-            setIsMuted(true);
-            setLastVolume(volume);
-            handleMute();
-          }} />
-          <img src={volumeMuteIcon} alt="volume-muted" className="volume-mute" style={{ display: showMute }} onClick={() => {
-            setShowVolume('block');
-            setShowMute('none');
-            setIsMuted(false);
-            handleMute();
-          }} />
-        </div> */}
+        {/* <Volume volume={volume} setVolume={setVolume} /> */}
 
         <a role="button" className={`navbar-burger ${activeClass}`} aria-label="menu"
           aria-expanded={isActive} data-target="navbarBasicExample" onClick={handleClick}>

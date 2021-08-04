@@ -6,12 +6,18 @@ import logo from '../assets/images/bubble.png'
 import useSound from 'use-sound'
 import useKeyboardBindings from '../hooks/useKeyboardBindings'
 import drums from '../assets/sounds/drum-sprite-full.wav'
+
 import Volume from '../components/Volume'
 
 
 export default function Home(props) {
   const drumSprite = drums;
   const { volume, setVolume } = props;
+  const [showMute, setShowMute] = useState('')
+  const [showVolume, setShowVolume] = useState('block')
+  const [drumsActive, setDrumsActive] = useState(false)
+  const [showStartButton, setShowStartButton] = useState('block')
+  const [showDrumMachine, setShowDrumMachine] = useState('none');
 
 
   const [play] = useSound(drumSprite, {
@@ -24,8 +30,10 @@ export default function Home(props) {
       crash: [10000, 750],
       brush: [12000, 500],
       ride: [14000, 500],
+      letsGo: [16000, 1000],
     },
-    volume: volume
+    volume
+
   })
 
 
@@ -40,8 +48,22 @@ export default function Home(props) {
     8: () => play({ id: 'ride' }),
   })
 
+  const handleShowDrums = () => {
+    setShowStartButton('none')
+    setShowDrumMachine('flex')
+  }
+
+
   const handleChange = (e) => {
-    setVolume(e.target.value / 100)
+    if (e.target.value !== 0) {
+      setVolume(e.target.value / 100)
+      setShowVolume('block')
+      setShowMute('')
+    } else {
+      setVolume(e.target.value / 100)
+      setShowMute('block')
+      setShowVolume('')
+    }
   }
 
   return (
@@ -59,53 +81,69 @@ export default function Home(props) {
       <div className="top-row">
         <img src={pick} alt="pick-logo" className="pick" />
       </div>
-      <div className="drum-machine">
-        <div className="drum-button-row">
-          <button aria-label="kick"
-            onMouseDown={() => play({ id: 'kick' })}
-            className="button is-black is-medium drums"
-          >1</button>
-          <button aria-label="snare"
-            onMouseDown={() => play({ id: 'snare' })}
-            className="button is-black is-medium drums"
-          >2</button>
-          <button aria-label="hihat"
-            onMouseDown={() => play({ id: 'hihat' })}
-            className="button is-black is-medium drums"
-          >3</button>
-          <button aria-label="boop"
-            onMouseDown={() => play({ id: 'boop' })}
-            className="button is-black is-medium drums"
-          >4</button>
-        </div>
-        <div className="drum-button-row">
-          <button aria-label="bigsnare"
-            onMouseDown={() => play({ id: 'bigsnare' })}
-            className="button is-black is-medium drums"
-          >5</button>
-          <button aria-label="crash"
-            onMouseDown={() => play({ id: 'crash' })}
-            className="button is-black is-medium drums"
-          >6</button>
-          <button aria-label="brush"
-            onMouseDown={() => play({ id: 'brush' })}
-            className="button is-black is-medium drums"
-          >7</button>
-          <button aria-label="ride"
-            onMouseDown={() => play({ id: 'ride' })}
-            className="button is-black is-medium drums"
-          >8</button>
-        </div>
-      </div>
-      <section className="section">
-        <p>Relax... Take A Beat....<br />
-          ...Try Your Number Pad...
-        </p>
 
-      </section>
-      <div className="volume-slider-container">
-        <Volume volume={volume} setVolume={setVolume} />
-        <input type="range" id="volume-control" onChange={(e) => handleChange(e)} className="slider"></input>
+      <button className="button is-outlined is-black" onClick={
+
+        () => {
+          play({ id: 'letsGo' })
+          handleShowDrums()
+        }
+
+      } style={{ display: showStartButton }}>Launch Drum Machine</button>
+
+      <div className="drum-machine-and-volume-container" style={{ display: showDrumMachine }}>
+        <div className="drum-machine">
+          <div className="drum-button-row">
+            <button aria-label="kick"
+              onMouseDown={() => play({ id: 'kick' })}
+              className="button is-black is-medium drums"
+            >1</button>
+            <button aria-label="snare"
+              onMouseDown={() => play({ id: 'snare' })}
+              className="button is-black is-medium drums"
+            >2</button>
+            <button aria-label="hihat"
+              onMouseDown={() => play({ id: 'hihat' })}
+              className="button is-black is-medium drums"
+            >3</button>
+            <button aria-label="boop"
+              onMouseDown={() => play({ id: 'boop' })}
+              className="button is-black is-medium drums"
+            >4</button>
+          </div>
+          <div className="drum-button-row">
+            <button aria-label="bigsnare"
+              onMouseDown={() => play({ id: 'bigsnare' })}
+              className="button is-black is-medium drums"
+            >5</button>
+            <button aria-label="crash"
+              onMouseDown={() => play({ id: 'crash' })}
+              className="button is-black is-medium drums"
+            >6</button>
+            <button aria-label="brush"
+              onMouseDown={() => play({ id: 'brush' })}
+              className="button is-black is-medium drums"
+            >7</button>
+            <button aria-label="ride"
+              onMouseDown={() => play({ id: 'ride' })}
+              className="button is-black is-medium drums"
+            >8</button>
+          </div>
+        </div>
+        <section className="section">
+          <p>Relax... Take A Beat....<br />
+            ...Try Your Number Pad...
+          </p>
+
+        </section>
+
+        <div className="volume-slider-container">
+
+          <Volume volume={volume} setVolume={setVolume}
+            showVolume={showVolume} setShowVolume={setShowVolume}
+            showMute={showMute} setShowMute={setShowMute} />
+          <input type="range" id="volume-control" onChange={(e) => handleChange(e)} className="slider"></input>
+        </div>
       </div>
       <br />
       <br />
