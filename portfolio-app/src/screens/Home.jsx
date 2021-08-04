@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Home.css"
 import pick from '../assets/images/pick-logo.png'
 import useSound from 'use-sound'
 import useKeyboardBindings from '../hooks/useKeyboardBindings'
 import drums from '../assets/sounds/drum-sprite-full.wav'
+import Volume from '../components/Volume'
 
 
-export default function Home() {
+export default function Home(props) {
   const drumSprite = drums;
+  const { volume, setVolume } = props;
+
 
   const [play] = useSound(drumSprite, {
     sprite: {
@@ -19,8 +22,10 @@ export default function Home() {
       crash: [10000, 750],
       brush: [12000, 500],
       ride: [14000, 500],
-    }
+    },
+    volume: volume
   })
+
 
   useKeyboardBindings({
     1: () => play({ id: 'kick' }),
@@ -33,48 +38,64 @@ export default function Home() {
     8: () => play({ id: 'ride' }),
   })
 
+  const handleChange = (e) => {
+    setVolume(e.target.value / 100)
+  }
+
   return (
 
     <div className="home-container">
-      <img src={pick} alt="pick-logo" className="pick" />
-      <div className="drum-machine">
-        <button aria-label="kick"
-          onMouseDown={() => play({ id: 'kick' })}
-          className="button is-black is-medium"
-        >1</button>
-        <button aria-label="snare"
-          onMouseDown={() => play({ id: 'snare' })}
-          className="button is-black is-medium"
-        >2</button>
-        <button aria-label="hihat"
-          onMouseDown={() => play({ id: 'hihat' })}
-          className="button is-black is-medium"
-        >3</button>
-        <button aria-label="boop"
-          onMouseDown={() => play({ id: 'boop' })}
-          className="button is-black is-medium"
-        >4</button>
-        <button aria-label="bigsnare"
-          onMouseDown={() => play({ id: 'bigsnare' })}
-          className="button is-black is-medium"
-        >5</button>
-        <button aria-label="crash"
-          onMouseDown={() => play({ id: 'crash' })}
-          className="button is-black is-medium"
-        >6</button>
-        <button aria-label="brush"
-          onMouseDown={() => play({ id: 'brush' })}
-          className="button is-black is-medium"
-        >7</button>
-        <button aria-label="ride"
-          onMouseDown={() => play({ id: 'ride' })}
-          className="button is-black is-medium"
-        >8</button>
+      <div className="top-row">
+        <img src={pick} alt="pick-logo" className="pick" />
       </div>
-      <section className="section">
-        Relax... Take A Beat....
-        Play 1 - 4 on your keyboard
+      <div className="drum-machine">
+        <div className="drum-button-row">
+          <button aria-label="kick"
+            onMouseDown={() => play({ id: 'kick' })}
+            className="button is-black is-medium drums"
+          >1</button>
+          <button aria-label="snare"
+            onMouseDown={() => play({ id: 'snare' })}
+            className="button is-black is-medium drums"
+          >2</button>
+          <button aria-label="hihat"
+            onMouseDown={() => play({ id: 'hihat' })}
+            className="button is-black is-medium drums"
+          >3</button>
+          <button aria-label="boop"
+            onMouseDown={() => play({ id: 'boop' })}
+            className="button is-black is-medium drums"
+          >4</button>
+        </div>
+        <div className="drum-button-row">
+          <button aria-label="bigsnare"
+            onMouseDown={() => play({ id: 'bigsnare' })}
+            className="button is-black is-medium drums"
+          >5</button>
+          <button aria-label="crash"
+            onMouseDown={() => play({ id: 'crash' })}
+            className="button is-black is-medium drums"
+          >6</button>
+          <button aria-label="brush"
+            onMouseDown={() => play({ id: 'brush' })}
+            className="button is-black is-medium drums"
+          >7</button>
+          <button aria-label="ride"
+            onMouseDown={() => play({ id: 'ride' })}
+            className="button is-black is-medium drums"
+          >8</button>
+        </div>
+      </div>
+      <section className="section is-medium">
+        <p>Relax... Take A Beat....</p>
+
       </section>
+      <div className="volume-slider-container">
+        <Volume volume={volume} setVolume={setVolume} />
+        <input type="range" id="volume-control" onChange={(e) => handleChange(e)} className="slider"></input>
+      </div>
+      <br />
+      <br />
     </div>
 
   )

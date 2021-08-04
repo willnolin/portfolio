@@ -10,7 +10,8 @@ export default function About() {
           Ruby on Rails, Express, MongoDB, PostgreSQL, Javascript and html5.
           Will is also an experienced freelance Audio Engineer with a demonstrated history of working in the music industry.
           He takes pride in delivering a great customer experience, which he has proven through years of customer
-          service and his recent group collaborations and git workflow at General Assembly.
+          service. He strives to produce the best product and his recent group collaborations and git workflow at General Assembly
+          has sharpened his exceptional team-leadership skills.
           <br />
           <br />
           He is a compassionate professional with a certificate in Software Engineering from General Assembly,

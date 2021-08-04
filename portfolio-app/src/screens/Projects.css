@@ -5,13 +5,13 @@
   align-items: center;
   margin: 0 auto;
   width: 100%;
-  /* max-width: 1000px; */
+  max-width: 1000px;
   background-color: rgb(90, 79, 79);
 }
 
 .projects-section {
   display:flex;
-  flex-flow: column;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   width: 100%;

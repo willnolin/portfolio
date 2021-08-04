@@ -6,17 +6,49 @@
   width: 100%;
 }
 
-.drum-machine {
+.top-row {
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
-  width: 30%;
+  justify-content: space-around;
 }
 
-.button {
-  margin: 5px;
+.drum-machine {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+}
+.drum-button-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%
+}
+
+button.drums {
+  margin: 20px 10px;
+  width: 60px;
 }
 
 .section {
   color:rgb(231, 234, 237);
+}
+
+.info-section {
+  margin: 10px;
+  color:rgb(231, 234, 237);
+}
+
+.volume-slider-container {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  margin-left: -50px;
+  height: 60px;
+  width:350px;
+}
+.slider {
+  margin-left: 0
 }

@@ -9,6 +9,7 @@ export default function Projects() {
   return (
     <div className="projects-container">
       <section className="projects-section">
+
         <a href="https://art-wall.netlify.app/">
           <div className="image-container">
             <img src={art} alt="Art Wall" className="project-img" />
@@ -20,19 +21,19 @@ export default function Projects() {
             </div>
           </div>
         </a>
-        <>
-          <a href="https://hz-game.netlify.app/">
-            <div className="image-container">
-              <img src={hz} alt="HZ" className="project-img" />
-              <div className="overlay">
-                <div className="description">
-                  <h3>HZ</h3>
-                  <p className="project-description">A quiz game tailored for sound engineers and anyone trying to identify certain freqiencies. Guess the frequency.  Train your ear!</p>
-                </div>
+
+        <a href="https://hz-game.netlify.app/">
+          <div className="image-container">
+            <img src={hz} alt="HZ" className="project-img" />
+            <div className="overlay">
+              <div className="description">
+                <h3>HZ</h3>
+                <p className="project-description">A quiz game tailored for sound engineers and anyone trying to identify certain freqiencies. Guess the frequency.  Train your ear!</p>
               </div>
             </div>
-          </a>
-        </>
+          </div>
+        </a>
+
         <a href="https://kitchintory.netlify.app/">
           <div className="image-container">
             <img src={kitchen} alt="Kitchintory" className="project-img" />

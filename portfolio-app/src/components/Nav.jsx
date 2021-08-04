@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
 import "./Nav.css"
+import Volume from './Volume'
 import { Link } from 'react-router-dom'
 import logo from '../assets/images/will-metivier-logo.png'
+// import volumeIcon from '../assets/images/volume.png'
+// import volumeMuteIcon from '../assets/images/volume-mute.png'
 
-export default function Nav() {
+export default function Nav(props) {
+  const { volume, setVolume } = props;
   const [activeClass, setActiveClass] = useState("");
   const [isActive, setIsActive] = useState(false)
   const [hamburgerOpen, setHamburgerOpen] = useState('')
+  // const [showMute, setShowMute] = useState('')
+  // const [showVolume, setShowVolume] = useState('block')
 
   const handleClick = () => {
     setIsActive(prevState => !prevState)
@@ -27,6 +33,23 @@ export default function Nav() {
           {/* <h1 className="title is-2">Will Metivier</h1> */}
         </Link>
 
+        <Volume volume={volume} setVolume={setVolume} />
+
+        {/* <div className="volume-container">
+          <img src={volumeIcon} alt="volume" className="volume" style={{ display: showVolume }} onClick={() => {
+            setShowVolume('none');
+            setShowMute('block');
+            setIsMuted(true);
+            setLastVolume(volume);
+            handleMute();
+          }} />
+          <img src={volumeMuteIcon} alt="volume-muted" className="volume-mute" style={{ display: showMute }} onClick={() => {
+            setShowVolume('block');
+            setShowMute('none');
+            setIsMuted(false);
+            handleMute();
+          }} />
+        </div> */}
 
         <a role="button" className={`navbar-burger ${activeClass}`} aria-label="menu"
           aria-expanded={isActive} data-target="navbarBasicExample" onClick={handleClick}>

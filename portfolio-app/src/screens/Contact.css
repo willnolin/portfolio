@@ -1,0 +1,24 @@
+
+.contact-container {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+height: 500px;
+margin: 20px auto;
+}
+
+.contact-title {
+  color:rgb(231, 234, 237);
+  font-size: 25px;
+}
+
+.icons {
+  width: 100px;
+}
+
+.email-address {
+  margin-top: 0;
+  color:rgb(3, 3, 3);
+  font-size: 22px;
+}
