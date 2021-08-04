@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import "./Home.css"
 import pick from '../assets/images/pick-logo.png'
+import studio from '../assets/images/will_cover.jpeg'
+import logo from '../assets/images/bubble.png'
 import useSound from 'use-sound'
 import useKeyboardBindings from '../hooks/useKeyboardBindings'
 import drums from '../assets/sounds/drum-sprite-full.wav'
@@ -46,6 +48,15 @@ export default function Home(props) {
 
     <div className="home-container">
       <div className="top-row">
+        <img src={logo} alt="bubble" className="bubble" /> <p className="home-title">Will Metivier</p>
+      </div>
+      <div className="top-row">
+        <h1 className="sub">Software Engineer</h1>
+      </div>
+      <div className="top-row">
+        <img src={studio} alt="in-the-studio" className="top-photo" />
+      </div>
+      <div className="top-row">
         <img src={pick} alt="pick-logo" className="pick" />
       </div>
       <div className="drum-machine">
@@ -86,8 +97,10 @@ export default function Home(props) {
           >8</button>
         </div>
       </div>
-      <section className="section is-medium">
-        <p>Relax... Take A Beat....</p>
+      <section className="section">
+        <p>Relax... Take A Beat....<br />
+          ...Try Your Number Pad...
+        </p>
 
       </section>
       <div className="volume-slider-container">
