@@ -4,6 +4,7 @@ import art from '../assets/images/Art-Wall-SS.png'
 import kitchen from '../assets/images/Kitchintory-SS.png'
 import bible from '../assets/images/SB-SS.png'
 import hz from '../assets/images/HZ-SS.png'
+import wordsearch from '../assets/images/Wordsearch-SS.png'
 
 export default function Projects() {
   return (
@@ -56,6 +57,18 @@ export default function Projects() {
             </div>
           </div>
         </a>
+        <a href="https://5-min-wordsearch.netlify.app/">
+          <div className="image-container">
+            <img src={wordsearch} alt="5-min-wordsearch" className="project-img" />
+            <div className="overlay">
+              <div className="description">
+                <h3 className="title is-6">Wordsearch</h3>
+                <p className="subtitle project-description">Find as many words as you can in 5 minutes!</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
       </section>
 
     </div>
