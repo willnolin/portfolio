@@ -4,9 +4,19 @@ import volumeMuteIcon from '../assets/images/volume-mute.png'
 import "./Volume.css"
 
 export default function Volume(props) {
-  const { volume, setVolume, showVolume, setShowVolume, showMute, setShowMute } = props;
+  const {
+    volume,
+    setVolume,
+    showVolume,
+    setShowVolume,
+    showMute,
+    setShowMute,
+    handleChange,
+    isMuted,
+    setIsMuted
+  } = props;
   const [lastVolume, setLastVolume] = useState(null);
-  const [isMuted, setIsMuted] = useState(false);
+  // const [isMuted, setIsMuted] = useState(false);
   // const [showMute, setShowMute] = useState('')
   // const [showVolume, setShowVolume] = useState('block')
 
@@ -20,7 +30,7 @@ export default function Volume(props) {
   }
 
   return (
-
+<>
     <div className="volume-container">
       <img src={volumeIcon} alt="volume" className="volume" style={{ display: showVolume }}
         onClick={() => {
@@ -40,6 +50,7 @@ export default function Volume(props) {
         }}
       />
     </div>
-
+    <input type="range" id="volume-control" onChange={(e) => handleChange(e)} className="slider"></input>
+</>
   )
 }

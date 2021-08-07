@@ -15,10 +15,10 @@ export default function Home(props) {
   const { volume, setVolume } = props;
   const [showMute, setShowMute] = useState('')
   const [showVolume, setShowVolume] = useState('block')
-  const [drumsActive, setDrumsActive] = useState(false)
+  // const [drumsActive, setDrumsActive] = useState(false)
   const [showStartButton, setShowStartButton] = useState('block')
   const [showDrumMachine, setShowDrumMachine] = useState('none');
-
+  const [isMuted, setIsMuted] = useState(false);
 
   const [play] = useSound(drumSprite, {
     sprite: {
@@ -59,10 +59,12 @@ export default function Home(props) {
       setVolume(e.target.value / 100)
       setShowVolume('block')
       setShowMute('')
+      setIsMuted(false);
     } else {
       setVolume(e.target.value / 100)
       setShowMute('block')
       setShowVolume('')
+      setIsMuted(true);
     }
   }
 
@@ -141,8 +143,10 @@ export default function Home(props) {
 
           <Volume volume={volume} setVolume={setVolume}
             showVolume={showVolume} setShowVolume={setShowVolume}
-            showMute={showMute} setShowMute={setShowMute} />
-          <input type="range" id="volume-control" onChange={(e) => handleChange(e)} className="slider"></input>
+            showMute={showMute} setShowMute={setShowMute}
+            handleChange={handleChange} isMuted={isMuted}
+            setIsMuted={setIsMuted}/>
+          {/* <input type="range" id="volume-control" onChange={(e) => handleChange(e)} className="slider"></input> */}
         </div>
       </div>
       <br />
