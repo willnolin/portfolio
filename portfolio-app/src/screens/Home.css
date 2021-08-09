@@ -12,12 +12,18 @@
   font-size: 50px;
   font-family: "Mandali", sans-serif;
   font-weight: bold;
-  margin-top: 75px;
+  margin-top: 50px;
+}
+
+.bubble {
+  width: 125px;
+  height: 125px;
 }
 
 .sub {
   color: rgb(231, 234, 237);
   font-size: 30px;
+  margin-left: 20px;
   font-family: "Mandali", sans-serif;
   text-shadow: 2px 2px 10px black;
 }
@@ -74,6 +80,11 @@ button.drums {
   margin: 10px;
 }
 
+.drum-machine-text {
+  font-family: Mandali, sans-serif;
+  font-weight: bold;
+}
+
 /* .volume-slider-container {
   display: flex;
   flex-direction: row;
@@ -98,7 +109,7 @@ button.drums {
   }
 
   .bubble {
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
   }
 }

@@ -57,13 +57,13 @@ export default function Projects() {
             </div>
           </div>
         </a>
-        <a href="https://5-min-wordsearch.netlify.app/">
+        <a href="https://3-min-wordsearch.netlify.app/">
           <div className="image-container">
-            <img src={wordsearch} alt="5-min-wordsearch" className="project-img" />
+            <img src={wordsearch} alt="3-min-wordsearch" className="project-img" />
             <div className="overlay">
               <div className="description">
                 <h3 className="title is-6">Wordsearch</h3>
-                <p className="subtitle project-description">Find as many words as you can in 5 minutes!</p>
+                <p className="subtitle project-description">Find as many words as you can in 3 minutes!</p>
               </div>
             </div>
           </div>
