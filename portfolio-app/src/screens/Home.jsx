@@ -133,7 +133,7 @@ export default function Home(props) {
           </div>
         </div>
         <section className="section">
-          <p className="drum-machine-text">1
+          <p className="drum-machine-text">
             ...Try Your Number Pad...
           </p>
 
