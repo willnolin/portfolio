@@ -3,7 +3,7 @@ import "./Footer.css"
 import github from "../assets/images/github_thumb.png"
 import linkedin from "../assets/images/linked_icon.png"
 import email from "../assets/images/email_icon.png"
-import resume from "../assets/resources/Will_Metivier_res.pdf"
+import resume from "../assets/resources/WillM_Resume.pdf"
 import FileSaver from 'file-saver'
 
 export default function Footer() {
@@ -11,7 +11,7 @@ export default function Footer() {
   const saveFile = () => {
     FileSaver.saveAs(
       resume,
-      "Will_Metivier_Resume.pdf"
+      "WillM_Resume.pdf"
     );
   }
   return (
