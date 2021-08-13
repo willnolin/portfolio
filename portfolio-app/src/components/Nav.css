@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
- background-color: rgb(231, 234, 237);
+  background-color: rgb(231, 234, 237);
 }
 .navbar-container {
   /* max-width: 1100px; */
@@ -15,15 +15,15 @@
 .navbar-end {
   display: flex;
   justify-content: space-around;
-  margin-left:60%;
+  margin-left: 60%;
   margin-right: 50px;
   margin-top: 10px;
-  width: 100%
+  width: 100%;
 }
 
 .title {
   margin: 10px 50px;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
 }
 .hamburger-menu-content {
   display: flex;
@@ -49,28 +49,32 @@
   /* left: -100px; */
 }
 .hamburger-links {
-  color:rgb(231, 234, 237);
-  margin: 25px; 
+  color: rgb(231, 234, 237);
+  margin: 25px;
 }
 
 .link-text {
-  color:rgb(231, 234, 237);
-  font-weight:bold;
+  color: rgb(231, 234, 237);
+  font-weight: bold;
   text-decoration: none;
 }
 .valume-container {
-position:relative;
+  position: relative;
 }
 .volume {
-  position:absolute;
+  position: absolute;
   width: 30px;
-  height:30px;
+  height: 30px;
   margin: 10px 50px;
 }
 .volume-mute {
-  position:absolute;
+  position: absolute;
   display: none;
   width: 30px;
-  height:30px;
+  height: 30px;
   margin: 10px 50px;
+}
+
+.nav-resume-btn {
+  margin: 10px 40px;
 }

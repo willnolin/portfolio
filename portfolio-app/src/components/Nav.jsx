@@ -7,7 +7,7 @@ import logo from '../assets/images/will-metivier-logo.png'
 // import volumeMuteIcon from '../assets/images/volume-mute.png'
 
 export default function Nav(props) {
-  const { volume, setVolume } = props;
+  const { volume, setVolume, saveFile } = props;
   const [activeClass, setActiveClass] = useState("");
   const [isActive, setIsActive] = useState(false)
   const [hamburgerOpen, setHamburgerOpen] = useState('')
@@ -32,7 +32,9 @@ export default function Nav(props) {
         <Link to="/"> <img src={logo} alt="will-metivier-logo" />
           {/* <h1 className="title is-2">Will Metivier</h1> */}
         </Link>
-
+        <button className="button is-black is-outlined nav-resume-btn" onClick={saveFile}>
+          Download Resume
+        </button>
         {/* <Volume volume={volume} setVolume={setVolume} /> */}
 
         <a role="button" className={`navbar-burger ${activeClass}`} aria-label="menu"

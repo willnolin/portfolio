@@ -3,17 +3,17 @@ import "./Footer.css"
 import github from "../assets/images/github_thumb.png"
 import linkedin from "../assets/images/linked_icon.png"
 import email from "../assets/images/email_icon.png"
-import resume from "../assets/resources/WillM_Resume.pdf"
-import FileSaver from 'file-saver'
+// import resume from "../assets/resources/WillM_Resume.pdf"
+// import FileSaver from 'file-saver'
 
-export default function Footer() {
+export default function Footer({saveFile}) {
 
-  const saveFile = () => {
-    FileSaver.saveAs(
-      resume,
-      "WillM_Resume.pdf"
-    );
-  }
+  // const saveFile = () => {
+  //   FileSaver.saveAs(
+  //     resume,
+  //     "WillM_Resume.pdf"
+  //   );
+  // }
   return (
 
     <footer className="footer">
