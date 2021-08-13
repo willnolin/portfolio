@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Projects.css"
-import art from '../assets/images/Art-Wall-SS.png'
+import art from '../assets/images/ART_WALL_SS.png'
 import kitchen from '../assets/images/Kitchintory-SS.png'
 import bible from '../assets/images/SB-SS.png'
 import hz from '../assets/images/HZ-SS.png'
@@ -17,7 +17,8 @@ export default function Projects() {
             <div className="overlay">
               <div className="description">
                 <h3 className="title is-5">Art Wall</h3>
-                <p className="subtitle project-description">A community where artists can find spaces to sell their artwork, showcase their talent and open a space to host artists.</p>
+                <p className="subtitle project-description">A community where artists can find spaces to sell their artwork,
+                  showcase their talent and open a space to host artists. Built with <span className="bold">React, CSS and HTML5</span> front-end and <span className="bold">Ruby on Rails</span> back-end.</p>
               </div>
             </div>
           </div>
@@ -29,7 +30,7 @@ export default function Projects() {
             <div className="overlay">
               <div className="description">
                 <h3 className="title is-5">HZ</h3>
-                <p className="subtitle project-description">A quiz game tailored for sound engineers and anyone trying to identify certain freqiencies. Guess the frequency.  Train your ear!</p>
+                <p className="subtitle project-description">A quiz game tailored for sound engineers and anyone trying to identify certain freqiencies. Guess the frequency.  Train your ear!  Built with <span className="bold">React, CSS and HTML5</span> </p>
               </div>
             </div>
           </div>
@@ -41,7 +42,7 @@ export default function Projects() {
             <div className="overlay">
               <div className="description">
                 <h3 className="title is-5">Kitchintory</h3>
-                <p className="subtitle project-description">An app to keep track of kitchen inventory.  Add, edit and delete items from your stock. Keep track of what has expired. </p>
+                <p className="subtitle project-description">An app to keep track of kitchen inventory.  Add, edit and delete items from your stock. Keep track of what has expired. Built with a <span className="bold">MERN</span> stack and full CRUD. </p>
               </div>
             </div>
           </div>
@@ -63,7 +64,7 @@ export default function Projects() {
             <div className="overlay">
               <div className="description">
                 <h3 className="title is-6">Wordsearch</h3>
-                <p className="subtitle project-description">Find as many words as you can in 3 minutes!</p>
+                <p className="subtitle project-description">A game built with <span className="bold">React, CSS and HTML5</span>. Find as many words as you can in 3 minutes!</p>
               </div>
             </div>
           </div>
