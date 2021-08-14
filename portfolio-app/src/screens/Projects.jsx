@@ -11,7 +11,7 @@ export default function Projects() {
     <div className="projects-container">
       <section className="projects-section">
 
-        <a href="https://art-wall.netlify.app/">
+        <a href="https://art-wall.netlify.app/" target="_blank" rel="noreferrer noopener">
           <div className="image-container">
             <img src={art} alt="Art Wall" className="project-img" />
             <div className="overlay">
@@ -24,7 +24,7 @@ export default function Projects() {
           </div>
         </a>
 
-        <a href="https://hz-game.netlify.app/">
+        <a href="https://hz-game.netlify.app/" target="_blank" rel="noreferrer noopener">
           <div className="image-container">
             <img src={hz} alt="HZ" className="project-img" />
             <div className="overlay">
@@ -36,7 +36,7 @@ export default function Projects() {
           </div>
         </a>
 
-        <a href="https://kitchintory.netlify.app/">
+        <a href="https://kitchintory.netlify.app/" target="_blank" rel="noreferrer noopener">
           <div className="image-container">
             <img src={kitchen} alt="Kitchintory" className="project-img" />
             <div className="overlay">
@@ -47,7 +47,7 @@ export default function Projects() {
             </div>
           </div>
         </a>
-        <a href="https://willnolin.github.io/songwriter-bible/">
+        <a href="https://willnolin.github.io/songwriter-bible/" target="_blank" rel="noreferrer noopener">
           <div className="image-container">
             <img src={bible} alt="Songerwriter Bible" className="project-img" />
             <div className="overlay">
@@ -58,7 +58,7 @@ export default function Projects() {
             </div>
           </div>
         </a>
-        <a href="https://3-min-wordsearch.netlify.app/">
+        <a href="https://3-min-wordsearch.netlify.app/" target="_blank" rel="noreferrer noopener">
           <div className="image-container">
             <img src={wordsearch} alt="3-min-wordsearch" className="project-img" />
             <div className="overlay">
