@@ -9,10 +9,10 @@ export default function Contact() {
   return (
     <div className="contact-container">
       <h1 className="contact-title">Will wants to hear from you!</h1>
-      <a href="https://www.linkedin.com/in/willnolinmetivier/"><img src={linkedin} alt="linkedin" className="icons" /></a>
-      <a href="https://github.com/willnolin"><img src={github} alt="github" className="icons" /></a>
+      <a href="https://www.linkedin.com/in/willnolinmetivier/" target="_blank" rel="noreferrer noopener"><img src={linkedin} alt="linkedin" className="icons" /></a>
+      <a href="https://github.com/willnolin" target="_blank" rel="noreferrer noopener"><img src={github} alt="github" className="icons" /></a>
       <h1 className="contact-title">...email him..</h1>
-      <a href="https://mail.google.com/"><img src={email} alt="email" className="icons" /></a>
+      <a href="https://mail.google.com/" target="_blank" rel="noreferrer noopener"><img src={email} alt="email" className="icons" /></a>
       <h1 className="email-address">willnolin@gmail.com</h1>
     </div>
   )
