@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import "./Nav.css"
-import Volume from './Volume'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
+
 import logo from '../assets/images/will-metivier-logo.png'
 // import volumeIcon from '../assets/images/volume.png'
 // import volumeMuteIcon from '../assets/images/volume-mute.png'
@@ -11,6 +11,7 @@ export default function Nav(props) {
   const [activeClass, setActiveClass] = useState("");
   const [isActive, setIsActive] = useState(false)
   const [hamburgerOpen, setHamburgerOpen] = useState('')
+
 
 
   const handleClick = () => {
@@ -31,9 +32,13 @@ export default function Nav(props) {
         {/* <Link to="/"> <img src={logo} alt="will-metivier-logo" className="logo"/>
 
         </Link> */}
-        <a href="#home"> <img src={logo} alt="will-metivier-logo" className="logo"/>
-
-</a>
+        <Link
+          to="home" 
+          spy={true} 
+          smooth={true} 
+          duration={500} >
+          <img src={logo} alt="will-metivier-logo" className="logo" />
+        </Link>
         <button className="button is-black is-outlined nav-resume-btn" onClick={saveFile}>
           Download Resume
         </button>
@@ -50,17 +55,70 @@ export default function Nav(props) {
       <div id="navbarBasicExample" className={`navbar-menu`}>
 
         <div className="navbar-end">
-        <a href="#projects"><button className="button is-link is-outlined">Projects</button></a>
-        <a href="#about"><button className="button is-black is-outlined">About</button></a>
-        <a href="#contact"><button className="button is-info is-outlined">Contact</button></a>
-
+        <Link 
+          to="projects" 
+          spy={true} 
+          smooth={true} 
+          duration={500} 
+        >
+            <button className="button is-link is-outlined">Projects</button>
+          </Link>
+        <Link 
+          to="about" 
+          spy={true} 
+          smooth={true} 
+          duration={500} 
+          >
+            <button className="button is-black is-outlined">About</button>
+        </Link>
+        <Link 
+          to="contact" 
+          spy={true} 
+          smooth={true} 
+          duration={500} 
+          >
+            <button className="button is-black is-outlined">Contact</button>
+        </Link>
         </div>
       </div>
+
       <div className={`hamburger-menu-content ${hamburgerOpen}`}>
-        <div className="hamburger-links" onClick={handleClick}><a href="#home" className="link-text">Will Metivier</a></div>
-        <div className="hamburger-links" onClick={handleClick}><a href="#projects" className="link-text">Projects</a></div>
-        <div className="hamburger-links" onClick={handleClick}><a href="#about" className="link-text">About Will</a></div>
-        <div className="hamburger-links" onClick={handleClick}><a href="#contact" className="link-text">Contact Will</a></div>
+        <div className="hamburger-links" onClick={handleClick}>
+          <Link
+            to="home" 
+            spy={true} 
+            smooth={true} 
+            duration={500} className="link-text">
+            Will Metivier
+          </Link>
+        </div>
+        <div className="hamburger-links" onClick={handleClick}>
+          <Link
+            to="projects" 
+            spy={true} 
+            smooth={true} 
+            duration={500} className="link-text">
+            Projects
+          </Link>
+        </div>
+        <div className="hamburger-links" onClick={handleClick}>
+          <Link
+            to="about" 
+            spy={true} 
+            smooth={true} 
+            duration={500} className="link-text">
+            About Will
+          </Link>
+        </div>
+        <div className="hamburger-links" onClick={handleClick}>
+          <Link
+            to="contact" 
+            spy={true} 
+            smooth={true} 
+            duration={500} className="link-text">
+            Contact Will
+          </Link>
+        </div>
       </div>
     </nav>
   )

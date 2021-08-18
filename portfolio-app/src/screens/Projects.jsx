@@ -61,7 +61,7 @@ export default function Projects() {
           </div>
         </a>
         <a href="https://willnolin.github.io/songwriter-bible/" target="_blank" rel="noreferrer noopener" className="project-link">
-          <div data-aos="fade-up" className="image-container">
+          <div data-aos="fade-left" className="image-container">
             <img src={bible} alt="Songerwriter Bible" className="project-img" />
             <div className="overlay">
               <div className="description">

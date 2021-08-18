@@ -1,11 +1,13 @@
 import './App.css';
-import { useState, useEffect } from 'react'
+import { useState, useEffect} from 'react'  
 import Home from './screens/Home';
 import Projects from './screens/Projects';
 import About from './screens/About';
 import Contact from './screens/Contact';
 import Layout from './components/Layout';
 import AOS from 'aos';
+
+
 import "aos/dist/aos.css"
 
 function App() {
@@ -15,16 +17,18 @@ function App() {
     AOS.init({duration: 2000});
   }, [])
 
+ 
+
   return (
     <div className="App">
-      <Layout volume={volume} setVolume={setVolume}>
+      <Layout volume={volume} setVolume={setVolume} >
         {/* <Switch> */}
         {/* <Route path="/">     */}
-          <section id="home"><Home volume={volume} setVolume={setVolume} /></section> 
-          <section id="projects"> <Projects /></section>
+        <section id="home"><Home volume={volume} setVolume={setVolume} /></section>
+        <section id="projects"> <Projects /></section>
          
-          <section id="about"><About /></section> 
-          <section id="contact"><Contact /></section> 
+        <section id="about"><About /></section>
+        <section id="contact"><Contact  /></section>
           {/* </Route> */}
         {/* </Switch> */}
       </Layout>
