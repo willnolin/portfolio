@@ -4,6 +4,7 @@ import Nav from './Nav';
 import Footer from './Footer'
 import resume from "../assets/resources/WillM_Resume.pdf"
 import FileSaver from 'file-saver'
+import "./Layout.css"
 
 export default function Layout(props) {
 
