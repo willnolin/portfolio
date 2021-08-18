@@ -11,8 +11,7 @@ export default function Nav(props) {
   const [activeClass, setActiveClass] = useState("");
   const [isActive, setIsActive] = useState(false)
   const [hamburgerOpen, setHamburgerOpen] = useState('')
-  // const [showMute, setShowMute] = useState('')
-  // const [showVolume, setShowVolume] = useState('block')
+
 
   const handleClick = () => {
     setIsActive(prevState => !prevState)
@@ -29,9 +28,12 @@ export default function Nav(props) {
     <nav className="navbar" role="navigation" aria-label="main navigation">
 
       <div className="navbar-brand">
-        <Link to="/"> <img src={logo} alt="will-metivier-logo" />
-          {/* <h1 className="title is-2">Will Metivier</h1> */}
-        </Link>
+        {/* <Link to="/"> <img src={logo} alt="will-metivier-logo" className="logo"/>
+
+        </Link> */}
+        <a href="#home"> <img src={logo} alt="will-metivier-logo" className="logo"/>
+
+</a>
         <button className="button is-black is-outlined nav-resume-btn" onClick={saveFile}>
           Download Resume
         </button>
@@ -48,17 +50,17 @@ export default function Nav(props) {
       <div id="navbarBasicExample" className={`navbar-menu`}>
 
         <div className="navbar-end">
-          <Link to="/about"><button className="button is-black is-outlined">About</button></Link>
-          <Link to="/projects"><button className="button is-link is-outlined">Projects</button></Link>
-          <Link to="/contact"><button className="button is-info is-outlined">Contact</button></Link>
+        <a href="#projects"><button className="button is-link is-outlined">Projects</button></a>
+        <a href="#about"><button className="button is-black is-outlined">About</button></a>
+        <a href="#contact"><button className="button is-info is-outlined">Contact</button></a>
 
         </div>
       </div>
       <div className={`hamburger-menu-content ${hamburgerOpen}`}>
-        <div className="hamburger-links" onClick={handleClick}><Link to="/" className="link-text">Will Metivier</Link></div>
-        <div className="hamburger-links" onClick={handleClick}><Link to="/about" className="link-text">About Will</Link></div>
-        <div className="hamburger-links" onClick={handleClick}><Link to="/projects" className="link-text">Projects</Link></div>
-        <div className="hamburger-links" onClick={handleClick}><Link to="/contact" className="link-text">Contact Will</Link></div>
+        <div className="hamburger-links" onClick={handleClick}><a href="#home" className="link-text">Will Metivier</a></div>
+        <div className="hamburger-links" onClick={handleClick}><a href="#projects" className="link-text">Projects</a></div>
+        <div className="hamburger-links" onClick={handleClick}><a href="#about" className="link-text">About Will</a></div>
+        <div className="hamburger-links" onClick={handleClick}><a href="#contact" className="link-text">Contact Will</a></div>
       </div>
     </nav>
   )

@@ -84,7 +84,7 @@ export default function Home(props) {
         <img src={pick} alt="pick-logo" className="pick" />
       </div>
 
-      <button className="button is-outlined is-black" onClick={
+      <button data-aos="zoom-in" className="button is-outlined is-black" onClick={
 
         () => {
           play({ id: 'letsGo' })
@@ -94,7 +94,7 @@ export default function Home(props) {
       } style={{ display: showStartButton }}>Launch Drum Machine</button>
 
       <div className="drum-machine-and-volume-container" style={{ display: showDrumMachine }}>
-        <div className="drum-machine">
+        <div data-aos="zoom-in" className="drum-machine">
           <div className="drum-button-row">
             <button aria-label="kick"
               onMouseDown={() => play({ id: 'kick' })}

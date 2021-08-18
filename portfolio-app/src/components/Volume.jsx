@@ -16,9 +16,6 @@ export default function Volume(props) {
     setIsMuted
   } = props;
   const [lastVolume, setLastVolume] = useState(null);
-  // const [isMuted, setIsMuted] = useState(false);
-  // const [showMute, setShowMute] = useState('')
-  // const [showVolume, setShowVolume] = useState('block')
 
   const handleMute = () => {
     if (isMuted) {

@@ -1,10 +1,11 @@
 import React from 'react'
 import "./About.css"
 
+
 export default function About() {
   return (
     <div className="about-container">
-      <div className="about-text">
+      <div data-aos="fade-right" className="about-text">
         <h2 className="about-title">About Will</h2>
         <p className="about-paragraph">Will is a Software Engineer building full stack applications with React JS,
           Ruby on Rails, Express, MongoDB, PostgreSQL, Javascript and html5.
@@ -18,7 +19,7 @@ export default function About() {
           a BA focused in Film, Television, Computer Science
           from University of Vermont and a certificate in Audio Engineering from Recording Connection.</p>
       </div>
-      <div className="about-photo">
+      <div data-aos="fade-left" className="about-photo">
         <img src="https://res.cloudinary.com/willnolin/image/upload/v1628007781/Will_hq87ar.png"
           alt="will-pic" className="will-image" />
       </div>
