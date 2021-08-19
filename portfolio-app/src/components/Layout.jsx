@@ -2,7 +2,7 @@ import React from 'react'
 // import Header from './Header'
 import Nav from './Nav';
 import Footer from './Footer'
-import resume from "../assets/resources/WillM_Resume.pdf"
+import resume from "../assets/resources/Will_Metivier.pdf"
 import FileSaver from 'file-saver'
 import "./Layout.css"
 
@@ -13,7 +13,7 @@ export default function Layout(props) {
   const saveFile = () => {
     FileSaver.saveAs(
       resume,
-      "WillM_Resume.pdf"
+      "Will_Metivier.pdf"
     );
   }
   
