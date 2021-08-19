@@ -83,42 +83,42 @@ export default function Nav(props) {
       </div>
 
       <div className={`hamburger-menu-content ${hamburgerOpen}`}>
-        <div className="hamburger-links" onClick={handleClick}>
           <Link
             to="home" 
             spy={true} 
             smooth={true} 
             duration={500} className="link-text">
-            Will Metivier
-          </Link>
-        </div>
         <div className="hamburger-links" onClick={handleClick}>
+            Will Metivier
+        </div>
+          </Link>
           <Link
             to="projects" 
             spy={true} 
             smooth={true} 
             duration={500} className="link-text">
-            Projects
-          </Link>
-        </div>
         <div className="hamburger-links" onClick={handleClick}>
+            Projects
+        </div>
+          </Link>
           <Link
             to="about" 
             spy={true} 
             smooth={true} 
             duration={500} className="link-text">
-            About Will
-          </Link>
-        </div>
         <div className="hamburger-links" onClick={handleClick}>
+            About Will
+        </div>
+          </Link>
           <Link
             to="contact" 
             spy={true} 
             smooth={true} 
             duration={500} className="link-text">
+        <div className="hamburger-links" onClick={handleClick}>
             Contact Will
-          </Link>
         </div>
+          </Link>
       </div>
     </nav>
   )
