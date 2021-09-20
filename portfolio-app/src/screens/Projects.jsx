@@ -31,7 +31,7 @@ export default function Projects() {
             <div className="overlay">
               <div className="description">
                 <h3 className="title is-5">HZ</h3>
-                <p className="subtitle project-description">A quiz game tailored for sound engineers and anyone trying to identify certain freqiencies. Guess the frequency.  Train your ear!  Built with <span className="bold">React, CSS and HTML5</span> </p>
+                <p className="subtitle project-description">A quiz game tailored for sound engineers and anyone trying to identify certain frequencies. Guess the frequency.  Train your ear!  Built with <span className="bold">React, CSS and HTML5</span> </p>
               </div>
             </div>
             </div>
